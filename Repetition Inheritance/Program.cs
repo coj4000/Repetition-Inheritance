@@ -10,6 +10,7 @@ namespace Repetition_Inheritance
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
