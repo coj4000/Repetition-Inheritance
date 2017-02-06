@@ -14,12 +14,13 @@ namespace Repetition_Inheritance
         public string RegistreringsNr { get; set; }
         public int KmPrLiter { get; set; }
 
-        public Bil(string Mærke, double PrisExAfgift,int KøbsÅr, int KmPrLiter)
+        public Bil(string Mærke, double PrisExAfgift,int KøbsÅr, int KmPrLiter, string RegistreringsNr)
         {
             this.BilPrisExAfgift = PrisExAfgift;
             this.KmPrLiter = KmPrLiter;
             this.KøbsÅr = KøbsÅr;
             this.Mærke = Mærke;
+            this.RegistreringsNr = RegistreringsNr;
         }
 
         public virtual double RegistreringsAfgift()
@@ -58,6 +59,7 @@ namespace Repetition_Inheritance
 
         public virtual int HalvÅrligEjerafgift()
         {
+
             return 1000;
         }
 

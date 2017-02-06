@@ -10,7 +10,17 @@ namespace Repetition_Inheritance
     {
         static void Main(string[] args)
         {
+            List<DieselBil> dieselBils = new List<DieselBil>();
+            dieselBils.Add(new DieselBil("BMW", 20000, 2008, 18, "2A4BD"));
+            dieselBils.Add(new DieselBil("VW", 10000, 1998, 6, "3ER4D", false ));
+            dieselBils.Add(new DieselBil("Porche", 500000, 2017, 10, "6FD3D"));
+            dieselBils.Add(new DieselBil("Bugatti", 32000000, 2016, 5, "9DEG3"));
+            dieselBils.Add(new DieselBil("Jaguar", 100000, 1968, 4, "4DFC5", false));
 
+            foreach (DieselBil biler in dieselBils)
+            {
+                Console.WriteLine("Bil Reg. nr. " + biler.RegistreringsNr + ": Koster i afgift " + biler.HalvÅrligEjerafgift());
+            }
         }
     }
 }
