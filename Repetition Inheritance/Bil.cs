@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repetition_Inheritance
 {
-    class Bil
+    abstract class Bil
     {
         public double BilPrisExAfgift { get; private set; }
         public int KøbsÅr { get; private set; }
@@ -57,11 +57,7 @@ namespace Repetition_Inheritance
             return BilPrisExAfgift + RegistreringsAfgift();
         }
 
-        public virtual int HalvÅrligEjerafgift()
-        {
-
-            return 1000;
-        }
+        public abstract int HalvÅrligEjerafgift();
 
     }
 }
