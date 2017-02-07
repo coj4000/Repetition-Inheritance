@@ -22,6 +22,13 @@ namespace Repetition_Inheritance
             this.Mærke = Mærke;
             this.RegistreringsNr = RegistreringsNr;
         }
+        public Bil(string Mærke, double PrisExAfgift, int KøbsÅr, string RegistreringsNr)
+        {
+            this.BilPrisExAfgift = PrisExAfgift;
+            this.KøbsÅr = KøbsÅr;
+            this.Mærke = Mærke;
+            this.RegistreringsNr = RegistreringsNr;
+        }
 
         public virtual double RegistreringsAfgift()
         {
