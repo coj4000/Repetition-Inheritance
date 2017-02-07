@@ -51,13 +51,13 @@ namespace Repetition_Inheritance
             return regafgift;
 
         }
-
         public double TotalPris()
         {
             return BilPrisExAfgift + RegistreringsAfgift();
         }
 
         public abstract int HalvÅrligEjerafgift();
+        public abstract int Rækkevidde();
 
     }
 }
