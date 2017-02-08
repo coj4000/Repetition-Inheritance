@@ -16,7 +16,7 @@ namespace Repetition_Inheritance
 
         public int BatteriKapacitet { get; set; }
         public int KmPrKW { get; set; }
-        public override int HalvÅrligEjerafgift()
+        public override double HalvÅrligEjerafgift()
         {
             return 0;
         }
@@ -55,7 +55,7 @@ namespace Repetition_Inheritance
             return regafgift;
         }
 
-        public override int Rækkevidde()
+        public override double Rækkevidde()
         {
             return BatteriKapacitet*KmPrKW;
         }

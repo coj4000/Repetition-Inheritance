@@ -8,9 +8,9 @@
         string Mærke { get; set; }
         string RegistreringsNr { get; set; }
 
-        int HalvÅrligEjerafgift();
+        double HalvÅrligEjerafgift();
         double RegistreringsAfgift();
-        int Rækkevidde();
+        double Rækkevidde();
         double TotalPris();
     }
 }

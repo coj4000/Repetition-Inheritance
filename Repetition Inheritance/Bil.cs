@@ -63,8 +63,8 @@ namespace Repetition_Inheritance
             return BilPrisExAfgift + RegistreringsAfgift();
         }
 
-        public abstract int HalvÅrligEjerafgift();
-        public abstract int Rækkevidde();
+        public abstract double HalvÅrligEjerafgift();
+        public abstract double Rækkevidde();
 
     }
 }
