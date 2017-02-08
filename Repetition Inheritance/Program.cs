@@ -68,10 +68,7 @@ namespace Repetition_Inheritance
                    
                         ElBil ebil = bilen as ElBil; ;
                         Console.WriteLine("El bil Reg. nr. " + ebil.RegistreringsNr + ": ER mærke: " + ebil.Mærke + " Og koster: " + ebil.BilPrisExAfgift + " og er fra " + ebil.KøbsÅr + " og kører " + ebil.KmPrKW + " km/KW og koster i afgift " + ebil.HalvÅrligEjerafgift() + " Bilen har " + ebil.BatteriKapacitet + "KW og kan køre " + ebil.Rækkevidde() + " pr opladning");
-                    if (bilen is IMotor)
-                    {
-                        Console.WriteLine(" Har Elmotor " + " Oplade tid = " + ebil.LadeTid());
-                    }
+                   
                     
                 }
                 if (bilen is DieselBil)
@@ -83,6 +80,11 @@ namespace Repetition_Inheritance
                 {
                     BenzinBil bbil = bilen as BenzinBil;
                     Console.WriteLine("Benzin bil Reg. nr. " + bbil.RegistreringsNr + ": ER mærke: " + bbil.Mærke + " Og koster: " + bbil.BilPrisExAfgift + " og er fra " + bbil.KøbsÅr + " og kører " + bbil.KmPrLiter + " km/Llog koster i afgift " + bbil.HalvÅrligEjerafgift() + " Bilen har " + bbil.Tank + "liter og kan køre " + bbil.Rækkevidde() + " pr optankting");
+                }
+                if (bilen is IMotor)
+                {
+                    IMotor motor = bilen as IMotor;
+                    Console.WriteLine(" Har Elmotor " + " Oplade tid = " + motor.LadeTid());
                 }
             }
 
