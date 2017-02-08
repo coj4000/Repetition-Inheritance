@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repetition_Inheritance
 {
-    abstract class Bil
+    abstract class Bil : IBil
     {
         public double BilPrisExAfgift { get; private set; }
         public int KøbsÅr { get; private set; }

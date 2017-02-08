@@ -32,7 +32,7 @@ namespace Repetition_Inheritance
             elBils.Add(new ElBil("cheveolet", 200000, 2017, "8Y5C", 10, 23));
             elBils.Add(new ElBil("Tesla", 700000, 2017, "7UP9", 10, 60));
 
-           List<Bil> bil = new List<Bil>();
+           List<IBil> bil = new List<IBil>();
             bil.Add(new DieselBil("BMW", 20000, 2008, 18, "2A4BD", 40));
             bil.Add(new DieselBil("VW", 10000, 1998, 12, "3ER4D", 100, false));
             bil.Add(new DieselBil("Porche", 500000, 2014, 35, "6FD3D", 100));
@@ -61,12 +61,15 @@ namespace Repetition_Inheritance
             //{
             //    Console.WriteLine("El bil Reg. nr. " + elBil.RegistreringsNr + ": ER mærke: " + elBil.Mærke + " Og koster: " + elBil.BilPrisExAfgift + " og er fra " + elBil.KøbsÅr + " og kører " + elBil.KmPrKW + " km/KW og koster i afgift " + elBil.HalvÅrligEjerafgift() + " Bilen har " + elBil.BatteriKapacitet + "KW og kan køre " + elBil.Rækkevidde() + " pr opladning");
             //}
-            foreach (Bil bilen in bil)
+            foreach (IBil bilen in bil)
             {
                 if (bilen is ElBil)
                 {
-                    ElBil ebil = bilen as ElBil;;
-                    Console.WriteLine("El bil Reg. nr. " + ebil.RegistreringsNr + ": ER mærke: " + ebil.Mærke + " Og koster: " + ebil.BilPrisExAfgift + " og er fra " + ebil.KøbsÅr + " og kører " + ebil.KmPrKW + " km/KW og koster i afgift " + ebil.HalvÅrligEjerafgift() + " Bilen har " + ebil.BatteriKapacitet + "KW og kan køre " + ebil.Rækkevidde() + " pr opladning");
+                    if (bilen is IMotor)
+                    {
+                        ElBil ebil = bilen as ElBil; ;
+                        Console.WriteLine("El bil Reg. nr. " + ebil.RegistreringsNr + ": ER mærke: " + ebil.Mærke + " Og koster: " + ebil.BilPrisExAfgift + " og er fra " + ebil.KøbsÅr + " og kører " + ebil.KmPrKW + " km/KW og koster i afgift " + ebil.HalvÅrligEjerafgift() + " Bilen har " + ebil.BatteriKapacitet + "KW og kan køre " + ebil.Rækkevidde() + " pr opladning" + " Har Elmotor " + " Oplade tid = " + ebil.LadeTid());
+                    }
                 }
                 if (bilen is DieselBil)
                 {
