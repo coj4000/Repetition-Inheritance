@@ -25,7 +25,7 @@ namespace Repetition_Inheritance
 
         public override double HalvÅrligEjerafgift()
         {
-            int ejerafgft = 0;
+            double ejerafgft = 0;
             if (KmPrLiter < 15)
             {
                 ejerafgft = 2000;
@@ -47,7 +47,7 @@ namespace Repetition_Inheritance
 
         public override double Rækkevidde()
         {
-            int række = Tank*KmPrLiter;
+            double række = Tank*KmPrLiter;
             return række;
         }
     }
